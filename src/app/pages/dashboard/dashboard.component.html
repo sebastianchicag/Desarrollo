@@ -1,0 +1,22 @@
+<div class="flex h-screen">
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+
+    <!-- Contenedor principal -->
+    <div class="flex flex-col flex-1 md:ml-64">
+        <!-- Header -->
+        <app-header></app-header>
+
+        <!-- Contenedor info -->
+        <main class="flex-1 overflow-y-auto p-4 bg-gray-100">
+            <router-outlet></router-outlet>
+
+            <div class="bg-white shadow p-16 sm:mx-6 mt-3 mx-0">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <apx-chart [series]="deptChartSeries" [chart]="{ type: 'bar', height: 350 }" [xaxis]="deptChartOptions?.xaxis" [title]="deptChartOptions?.title"></apx-chart>
+                    <apx-chart [series]="monthChartSeries" [chart]="{ type: 'line', height: 350 }" [xaxis]="monthChartOptions?.xaxis" [title]="monthChartOptions?.title"></apx-chart>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

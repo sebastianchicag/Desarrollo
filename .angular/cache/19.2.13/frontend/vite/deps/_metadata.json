@@ -1,0 +1,73 @@
+{
+  "hash": "b37f12bd",
+  "configHash": "03d3d076",
+  "lockfileHash": "21dc28ca",
+  "browserHash": "a2ee3ec2",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "cba86588",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "f652d252",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "e1689156",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "546573e6",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "358d5fad",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "69ecc060",
+      "needsInterop": false
+    },
+    "ng-apexcharts": {
+      "src": "../../../../../../node_modules/ng-apexcharts/fesm2022/ng-apexcharts.mjs",
+      "file": "ng-apexcharts.js",
+      "fileHash": "527f85c0",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-IVJ546KE": {
+      "file": "chunk-IVJ546KE.js"
+    },
+    "chunk-S7FE7MJO": {
+      "file": "chunk-S7FE7MJO.js"
+    },
+    "chunk-7A4VBJQF": {
+      "file": "chunk-7A4VBJQF.js"
+    },
+    "chunk-4JGRTUVN": {
+      "file": "chunk-4JGRTUVN.js"
+    },
+    "chunk-LLE6QZJ3": {
+      "file": "chunk-LLE6QZJ3.js"
+    },
+    "apexcharts.esm-TXD4VWYA": {
+      "file": "apexcharts__esm-TXD4VWYA.js"
+    },
+    "chunk-WDMUDEB6": {
+      "file": "chunk-WDMUDEB6.js"
+    }
+  }
+}

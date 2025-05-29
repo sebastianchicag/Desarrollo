@@ -1,0 +1,125 @@
+<div class="flex h-screen">
+    <div class="w-[255px]">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="flex flex-col bg-gray-100" style="width: calc(100vw - 255px);">
+        <div class="w-full">
+            <app-header></app-header>
+        </div>
+
+        <div class="flex-1 overflow-auto p-10">
+            <div *ngIf="showAlert" class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">¡Error!</strong>
+                <span class="block sm:inline"> Por favor complete los campos vacíos.</span>
+            </div>
+
+            <div *ngIf="emailAlreadyExists" class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">¡Error!</strong>
+                <span class="block sm:inline"> Ya existe un empleado con ese correo electrónico.</span>
+            </div>
+
+            <div class="bg-white shadow-md overflow-x-auto">
+                <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="p-6">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input
+                            name="firstName"
+                            [(ngModel)]="personData.firstName"
+                            required
+                            #firstName="ngModel"
+                            placeholder="Ingresa el nombre"
+                            [class.border-red-500]="form.submitted && firstName.invalid"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Apellido</label>
+                        <input
+                            name="lastName"
+                            [(ngModel)]="personData.lastName"
+                            required
+                            #lastName="ngModel"
+                            placeholder="Ingresa el apellido"
+                            [class.border-red-500]="form.submitted && lastName.invalid"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                        <input
+                            name="email"
+                            type="email"
+                            [(ngModel)]="personData.email"
+                            required
+                            #email="ngModel"
+                            placeholder="ejemplo@correo.com"
+                            [class.border-red-500]="(form.submitted && email.invalid) || emailAlreadyExists"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Puesto</label>
+                        <input
+                            name="position"
+                            [(ngModel)]="personData.position"
+                            required
+                            #position="ngModel"
+                            placeholder="Ej. Desarrollador Backend"
+                            [class.border-red-500]="form.submitted && position.invalid"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Departamento</label>
+                        <input
+                            name="department"
+                            [(ngModel)]="personData.department"
+                            required
+                            #department="ngModel"
+                            placeholder="Ej. Tecnología"
+                            [class.border-red-500]="form.submitted && department.invalid"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Fecha de ingreso</label>
+                        <input
+                            name="hireDate"
+                            type="date"
+                            [(ngModel)]="personData.hireDate"
+                            required
+                            #hireDate="ngModel"
+                            placeholder="Selecciona una fecha"
+                            [class.border-red-500]="form.submitted && hireDate.invalid"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700">Salario</label>
+                        <input
+                            name="salary"
+                            type="text"
+                            [(ngModel)]="personData.salary"
+                            required
+                            #salary="ngModel"
+                            placeholder="Ej. 250.000"
+                            [class.border-red-500]="form.submitted && salary.invalid"
+                            class="mt-1 block w-full border px-3 py-2 rounded"
+                        />
+                    </div>
+
+                    <button type="submit" class="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Registrar empleado
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
