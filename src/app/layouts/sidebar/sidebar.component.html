@@ -1,0 +1,95 @@
+<aside id="default-sidebar" class="cursor-pointer hidden md:fixed md:top-0 md:left-0 md:z-40 md:w-64 md:h-screen md:transition-transform md:translate-x-0 md:block" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <ul class="h-full flex flex-col gap-4 font-medium">
+            <!-- Empleados -->
+            <li>
+                <a
+                    [routerLink]="['/persons']"
+                    [ngClass]="{
+                    'active': router.url.startsWith('/persons') ||
+                                router.url.startsWith('/create-persons') ||
+                                router.url.startsWith('/edit-person')
+                    }"
+                    class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 18">
+                        <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5 5 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5 5 0 0 0-5-5Z" />
+                    </svg>
+                    <span class="ms-3">Empleados</span>
+                </a>
+            </li>
+
+            <!-- Departamentos -->
+            <li>
+                <a class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z" />
+                    </svg>
+                    <span class="ms-3">Departamentos</span>
+                </a>
+            </li>
+
+            <!-- Reportes -->
+            <li>
+                <a class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-8h8V3h-8v10z" />
+                    </svg>
+                    <span class="ms-3">Reportes</span>
+                </a>
+            </li>
+
+            <!-- Dashboard -->
+            <li>
+                <a routerLinkActive="active" [routerLink]="['/dashboard']" class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zm0-8h8V3h-8v10zM3 21h8v-6H3v6z" />
+                    </svg>
+                    <span class="ms-3">Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Proyectos -->
+            <li>
+                <a class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M5 3a2 2 0 0 0-2 2v2h2V5h2V3H5zm8 0v2h2v2h2V5a2 2 0 0 0-2-2h-2zM3 13v2a2 2 0 0 0 2 2h2v-2H5v-2H3zm14 0h-2v2h-2v2h2a2 2 0 0 0 2-2v-2z" />
+                    </svg>
+                    <span class="ms-3">Proyectos</span>
+                </a>
+            </li>
+
+            <!-- Usuarios -->
+            <li>
+                <a class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <span class="ms-3">Usuarios</span>
+                </a>
+            </li>
+
+            <!-- Configuración -->
+            <li>
+                <a class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm7.94-2.06a7.963 7.963 0 0 0 0-3.88l2.06-1.59-2-3.46-2.42 1a7.963 7.963 0 0 0-3.09-1.59L13 2h-2l-.5 2.42a7.963 7.963 0 0 0-3.09 1.59L5 5.41l-2 3.46 2.06 1.59a7.963 7.963 0 0 0 0 3.88L3 15.59l2 3.46 2.42-1a7.963 7.963 0 0 0 3.09 1.59L11 22h2l.5-2.42a7.963 7.963 0 0 0 3.09-1.59l2.42 1 2-3.46-2.06-1.59z"
+                        />
+                    </svg>
+                    <span class="ms-3">Configuración</span>
+                </a>
+            </li>
+
+            <!-- Soporte -->
+            <li>
+                <a class="flex items-center py-4 px-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 0 0-10 10v2a6 6 0 0 0 6 6h1v-4H8a2 2 0 0 1-2-2v-2a8 8 0 1 1 16 0v2a2 2 0 0 1-2 2h-1v4h1a6 6 0 0 0 6-6v-2A10 10 0 0 0 12 2z" />
+                    </svg>
+                    <span class="ms-3">Soporte</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
